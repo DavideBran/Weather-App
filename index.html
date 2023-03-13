@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;500&family=Raleway:wght@100;300;500&display=swap" rel="stylesheet">
+    
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <title>What's The Weather</title>
+
+    <!-- font Awesome -->
+    <script src="https://kit.fontawesome.com/7955a81f9f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="f-c-container">
+        <h3 class="f"> F </h3>
+        <h3 class="metric-separation"> <i class="fa-solid fa-temperature-half"></i> </h3>
+        <h3 class="c"> C </h3>
+    </div>
+    
+    <div class="app-box">
+        <div class="text-box">
+           <p class="location-text">Now in 
+            <p class="new-location"> cremona </p>
+            <p class="its">, it's</p> 
+            <p class="description"> </p>
+        </p>
+        </div>
+        <div class="temperature">
+            <h1> </h1>
+            <h3> </h3>
+        </div>
+        <div class="weather-card">
+            <div class="icon-temp-container">
+                <img src="" alt="weather-icon" class="weather-icon">
+                <div class="info">
+                    <div class="wind">
+                        <h2> <i class="fa-solid fa-wind"></i></h2> <p class="info-value"> x </p> <p> mph</p>
+                    </div>
+                    <div class="rain">
+                        <h2><i class="fa-solid fa-cloud-rain"></i></h2> <p class="info-value"> x </p> <p> %</p>
+                    </div>
+                    <div class="umidity">
+                        <h2><i class="fa-solid fa-droplet"></i></h2> <p class="info-value"> x </p> <p> mph</p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="insert-loc">
+            <h3 class="position"><i class="fa-solid fa-globe"></i></h3>
+            <input type="text" class="location-input" placeholder="Enter Location">
+            <div class="input-underline"></div>
+        </div>
+        
+    </div>
+
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
+    <!-- javascript -->
+    <script src="app.js"></script>
+</body>
+</html>
