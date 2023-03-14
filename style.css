@@ -42,24 +42,25 @@
 }
 
 .info p{
-    color: var(--minus-text-color);
+    color: #878787;
     display: inline;
     font-size: 0.7rem;
 }
 
 .info h2{
     display: inline;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-right: 10px;
     color: var(--text-important-color);
 }
 
 .info .info-value{
-    font-size: 2rem;
+    font-size: 1.3rem;
+    font-family: 'Noto Sans Lao', sans-serif;
 }
 
-.rain .info-value{
-    margin-left: 1px;
+.cloudiness .info-value{
+    margin-left: -6px;
 }
 
 .umidity .info-value{
@@ -182,6 +183,14 @@ p.location-text{
     justify-content: space-around;
     margin: auto;
     margin-top: 30px;
+}
+
+.f.active{
+    color: var(--text-important-color);
+}
+
+.c.active{
+    color: var(--text-important-color);
 }
 
 .position{

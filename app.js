@@ -8,9 +8,7 @@ let maxMinTemp= $(".temperature h3");
 let temp=$(".temperature h1");
 let weatherIcon= $(".weather-icon");
 let description= $(".description");
-let wind= $(".wind .info-value");
-let umidity= $(".umidity .info-value");
-let rain= $(".rain .info-value")
+let infoValue=$(".info-value");
 let metric= $(".f, .c");
 
 let metricValue="metric";
@@ -49,17 +47,34 @@ input.on("blur", ()=>{
 //metric set
 
 metric.on("click", (e)=>{
-    let target= $(e.target);
-    if(target.text().trim() == "F"){
-        metricValue = "imperial";
+
+    if(e.target.textContent.toLowerCase().trim() == 'c'){
+        if(metric.eq(0).hasClass("active")){
+            metric.eq(0).removeClass("active");
+        }
+        if(!(metric.eq(1).hasClass("active"))){
+            metric.eq(1).addClass("active");
+        }
+        metricValue= "metric";
     }else{
-        metricValue = "metric";
+        if(metric.eq(1).hasClass("active")){
+            metric.eq(1).removeClass("active");
+        }
+        if(!(metric.eq(0).hasClass("active")) == true){
+            metric.eq(0).addClass("active");
+        }
+
+        metricValue= "imperial"
     }
-    console.log(metricValue);
+
+    url="https://api.openweathermap.org/data/2.5/weather?units=" + metricValue +"&appid=" + key + "&lang=en&q=" + loc.text().trim();
+    xhr.open("GET", url, true);
+    xhr.send();
+
 });
 
 
-//API call
+//API standard call
 
 $(document).ready(()=>{
     xhr.open("GET", url, true);
@@ -76,7 +91,6 @@ xhr.onloadend= ()=>{
 };
 
 xhr.onreadystatechange= ()=>{
-    console.log(xhr.readyState);
     if(xhr.readyState === 4){
         meteo= JSON.parse(xhr.response);
         description.text(()=>{
@@ -97,8 +111,45 @@ xhr.onreadystatechange= ()=>{
             weatherIcon.attr("src", iconPath + (meteo.weather[0].main).toLowerCase() + ".svg");
         }
         
-
-        cosnole.log(url);
+        for(let i=0; i<infoValue.length; i++){
+            switch(i){
+                case 0:
+                    infoValue.eq(i).text(()=>{
+                        return Math.round(meteo.wind.speed);
+                    });
+                    break;
+                
+                case 1:
+                    infoValue.eq(i).text(()=>{
+                        return meteo.clouds.all;
+                    });
+                    break;
+                
+                case 2:
+                    infoValue.eq(i).text(()=>{
+                        return meteo.main.humidity;
+                    });  
+                    break;
+            }
+           
+        }
     }
 };
+
+
+//insert new location 
+
+input.on("change", ()=>{
+    
+    loc.text(()=>{
+        return input.val();
+    });
+
+    url="https://api.openweathermap.org/data/2.5/weather?units=" + metricValue +"&appid=" + key + "&lang=en&q=" + loc.text().trim();
+    console.log(url);
+    xhr.open("GET", url, true);
+    xhr.send();
+
+});
+
 
