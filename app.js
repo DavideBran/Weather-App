@@ -12,7 +12,7 @@ let infoValue=$(".info-value");
 let metric= $(".f, .c");
 
 let metricValue="metric";
-let iconPath= "/Weather icon/animated/";
+let iconPath= __dirname + "/Weather icon/animated/";
 
 //API variables 
 
