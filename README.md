@@ -4,6 +4,7 @@ Classic Weather App project, created using [Open Weather Map](https://openweathe
 
 ## Preview 
 
++ Live [Preview](https://davidebran.github.io/Weather-App/)
 
 ## Technologies 
 
