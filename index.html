@@ -19,41 +19,52 @@
 
 </head>
 <body>
+    <!-- Farenheit Celsius change -->
     <div class="f-c-container">
         <h3 class="f"> F </h3>
         <h3 class="metric-separation"> <i class="fa-solid fa-temperature-half"></i> </h3>
         <h3 class="c active"> C </h3>
     </div>
     
+    <!-- All App Text Box (temperature and information...) -->
+
     <div class="app-box">
+        <!-- Location Text Box -->
         <div class="text-box">
            <p class="location-text">Now in 
             <p class="new-location"> Catania </p>
-            <p class="its">, it's</p>
-            <p class="description"> </p>
+            <p class="its description-full-text">, it's</p>
+            <p class="description description-full-text"> </p>
         </p>
         </div>
-        <div class="temperature">
-            <h1> </h1>
-            <h3> </h3>
-        </div>
+
+        <!-- Information Icon Box -->
         <div class="weather-card">
-            <div class="icon-temp-container">
+            <!-- <div class="icon-temp-container"> -->
                 <img src="" alt="weather-icon" class="weather-icon">
+                
+                <!-- Temperature Text Box -->
+                <div class="temperature">
+                    <h1> </h1>
+                    <h3> </h3>
+                </div>
+                
+                <!-- Info Icon Box -->
                 <div class="info">
                     <div class="wind">
-                        <h2> <i class="fa-solid fa-wind"></i></h2> <p class="info-value"> </p> <p> mph</p>
+                        <h2> <i class="fa-solid fa-wind icon"></i></h2> <p class="info-value"> </p> <p> mph</p>
                     </div>
                     <div class="cloudiness">
-                        <h2><i class="fa-solid fa-cloud"></i></h2> <p class="info-value">  </p> <p> % </p>
+                        <h2><i class="fa-solid fa-cloud icon"></i></h2> <p class="info-value">  </p> <p> % </p>
                     </div>
                     <div class="umidity">
-                        <h2><i class="fa-solid fa-droplet"></i></h2> <p class="info-value"> </p> <p> % </p>
+                        <h2><i class="fa-solid fa-droplet icon"></i></h2> <p class="info-value"> </p> <p> % </p>
                     </div>
                 </div>    
-            </div>
+            <!-- </div> -->
         </div>
 
+        <!-- Insert Location Box -->
         <div class="insert-loc">
             <h3 class="position"><i class="fa-solid fa-globe"></i></h3>
             <input type="text" class="location-input" placeholder="Enter Location">
@@ -66,6 +77,7 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
     <script src="Script/jquery.js"></script>
+
     <!-- javascript -->
     <script src="Script/app.js"></script>
 </body>

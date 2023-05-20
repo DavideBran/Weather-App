@@ -86,6 +86,14 @@
     cursor: pointer;
 }
 
+/* img sizing */
+img{
+    width: 15%;
+    margin-top: auto;
+    margin-left: 10%;
+    margin-bottom: auto;
+}
+
 /* Responsive Deisgn */
 
 /* DESKTOP */
@@ -107,39 +115,14 @@
     }
 
     .app-box{
-        width: 100%;
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    p.location-text{
-        text-align: center;
+        margin: 50px 0;
     }
 
     .weather-card{
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
-    }
-
-    .icon-temp-container{
-        display: flex;
-        text-align: center;
-        justify-content: start;
-        width: 60%;
-        padding: 0;
-    }
-
-    .temperature{
-        position: absolute;
-        text-align: center;
-        left: 50%; top: 50%;
-        transform: translate(-50%, -40%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 0 10%;
     }
 
     .temperature h1{
@@ -147,37 +130,18 @@
     }
 
     .temperature h3{
-        margin-top: auto;
+        text-align: center;
         position: relative;
         bottom: 2rem;
-    }
-
-    .icon-temp-container h1{
-        font-size: 7rem;
-        display: inline;
-        position: relative;
-        margin: auto 0 0 0;
-    }
-
-    .icon-temp-container h3{
-        margin: 0 0 auto 0;
-    }
-
-    .weather-icon{
-        width: 25%; height: 25%;
-        margin-top: auto;
-        margin-left: 10%;
-        margin-bottom: auto;
     }
 
     .info{
         text-align: start;
         display: flex;
-        flex-direction: column;
+        flex-flow: column;
         padding: 10% 0;
         justify-content:space-evenly;
-        margin-left: auto;
-        margin-right: 15%;
+        margin-right: 20%;
     }
 
     .f-c-container{
@@ -271,21 +235,57 @@
         background-color: var(--bg-color);
     }
 
-    .icon-temp-container{
+    .f-c-container{
         display: flex;
-        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .f-c-container .metric-separation{
+        margin: 15px;
+    }
+
+    .text-box{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 12% 0 0 0;
+    }
+
+    .new-location, .description-full-text{
+        margin-left: 5px;
     }
 
     .weather-card{
-        position: absolute;
-        left: 50%; top: 35%;
-        transform: translate(-50%, 50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .temperature{
-        position: absolute;
-        
+      display: flex;
+      align-items: center;
+      flex-flow: column;
     }
+
+    .temperature h1{
+        margin: 0;
+    }
+
+    .temperature h3{
+        margin-top: 0;
+    }
+
+    .info{
+        text-align: left;
+    }
+
+   
+
+  
+
 
 }
 
