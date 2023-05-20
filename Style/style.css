@@ -86,20 +86,20 @@
     cursor: pointer;
 }
 
-/* img sizing */
-img{
-    width: 15%;
-    margin-top: auto;
-    margin-left: 10%;
-    margin-bottom: auto;
-}
-
 /* Responsive Deisgn */
 
 /* DESKTOP */
 
 /* layout */
     @media (min-width: 768px) {
+
+    /* img sizing */
+    img{
+        width: 15%;
+        margin-top: auto;
+        margin-left: 10%;
+        margin-bottom: auto;
+    }   
 
     body{
         margin: 0;    
@@ -228,11 +228,16 @@ img{
     /* MOBILE */
 
 @media (max-width: 600px) {
+    /* img sizing */
+    img{
+        width: 20%;
+    }
     
     body{
         text-align: center;
         margin: 0;    
         background-color: var(--bg-color);
+        overflow: hidden;
     }
 
     .f-c-container{
@@ -260,29 +265,79 @@ img{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin: auto;
         margin-top: 40px;
         margin-bottom: 40px;
     }
 
     .temperature{
-      display: flex;
-      align-items: center;
-      flex-flow: column;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
     }
 
     .temperature h1{
         margin: 0;
+        font-size: 4rem;
     }
 
     .temperature h3{
         margin-top: 0;
+        font-size: 1rem;
     }
 
     .info{
+        position: relative;
+        left: 5%;
         text-align: left;
     }
 
    
+    .insert-loc{
+        text-align: center;
+    }
+
+    .insert-loc h3{
+        display: inline;
+        font-size: 1rem;
+    }
+
+    .insert-loc input, .insert-loc input:focus{
+        border: 0;
+        border-bottom: 2px solid #ccc;
+        outline: 0;
+    }
+
+    .insert-loc input{
+        width: 10%;
+        background-color: transparent;
+        color: var(--text-important-color);
+    }
+
+
+    .input-underline{
+        position: relative;
+        bottom: 2px;
+        padding: 0 4px;
+        width: 10%;
+        height: 2px;
+        background-color: var(--text-important-color); 
+        margin: auto;
+        transform: scaleX(0);
+    }
+
+    .input-underline-action{
+        animation: 0.4s normal forwards underlineAnimate;
+    }
+
+    @keyframes underlineAnimate {
+        from{
+
+        }
+        to{
+            transform: scaleX(1);
+        }
+    }
 
   
 
